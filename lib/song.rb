@@ -60,12 +60,13 @@ class Song
   def self.new_from_filename(name)
     #binding.pry
     artist_name, song_name = name.gsub(".mp3", "").split(" - ")
-    # properties = { }
-    # properties[:name] = name.split #how do I get to the name only? get what's after the " - "#what? the song name from the instantiazted object
-    # properties[:artist_name] = name.split #how do I get to the artist name only? get what's before the " - "#what? the artist_name from the instantiated object
     song = self.new_by_name(song_name)
     song.artist_name = artist_name #instance variable is being set to the artist name string
     song
+    # properties = { }
+    # properties[:name] = name.split #how do I get to the name only? get what's after the " - "#what? the song name from the instantiazted object
+    # properties[:artist_name] = name.split #how do I get to the artist name only? get what's before the " - "#what? the artist_name from the instantiated object
+    
     #How can I split the string into name and artist_name and remove the - and .mp3?
     #I definitely need to Call .split, but on what?
      #this returns the whole string
